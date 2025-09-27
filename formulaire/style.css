@@ -1,0 +1,168 @@
+/* ---------- Layout général ---------- */
+* { box-sizing: border-box; }
+body {
+  background: white;
+  padding: 18px;
+  color: black;
+}
+
+/* cadre principal */
+.frame {
+  width: 420px;
+  border: 2px solid lightblue;
+  padding: 10px 14px;
+  line-height: 1.2;
+}
+
+/* section générale */
+.section { margin-bottom: 14px; }
+
+/* titre principal "Lien et images" (serif comme sur la capture) */
+.section-title {
+  margin: 2px 0 8px 0;
+  color: black;
+}
+
+/* lien vers Wikipedia, petit et violet */
+.wiki-link {
+  display: inline-block;
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+
+/* centrage du logo google */
+.logo-wrap {
+  margin: 6px 0 8px 0;
+}
+.google-logo {
+  width: 260px;  /* taille proche de la capture */
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* ligne de séparation fine */
+.divider {
+  border: 0;
+  border-top: 2px solid black;
+  margin: 8px 0 10px 0;
+}
+
+/* sous-titres (Des éléments ! / Barres de progression) */
+.section-subtitle {
+  font-family: "Times New Roman", Georgia, serif;
+  margin: 4px 0 10px 0;
+}
+
+/* ----- Formulaire / contrôles ----- */
+.controls .row {
+  margin-bottom: 8px;
+}
+
+/* inputs texte & password */
+.text-input {
+  width: 220px;
+  padding: 4px 6px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+/* date (on a choisi text pour le placeholder 'jj / mm / aaaa') */
+.date-input {
+  width: 160px;
+  padding: 4px 6px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+/* radios inline */
+.radios label {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+/* checkbox label style */
+.controls input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* bouton ok petit */
+.btn {
+  padding: 4px 8px;
+  border: 1px solid gray;
+  background: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* range (slider) */
+.range-input {
+  width: 180px;
+  vertical-align: middle;
+  margin-right: 6px;
+  height: 22px;
+}
+
+/* petit label à côté du slider */
+.small-label {
+    color: black;
+}
+
+/* petite étiquette avant la date */
+.small-label-inline {
+    margin-right: 8px; 
+}
+
+/* ----- barres de progression ----- */
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  width: 150px;
+}
+
+/* style des progress pour WebKit */
+progress {
+  width: 140px;
+  height: 12px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* WebKit bar (fond) */
+progress::-webkit-progress-bar {
+  background: white;
+}
+
+/* WebKit filled value */
+progress::-webkit-progress-value {
+  background: blue;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+  background: blue;
+}
+
+/* progress id=space => vert */
+progress#space::-webkit-progress-value {
+    background: green;
+}
+
+progress#space::-moz-progress-bar {
+    background: green;
+}
+
+/* petits ajustements responsive */
+@media (max-width: 380px) {
+  .frame { width: 95%; }
+  .text-input { width: 100%; }
+  .date-input { width: 100%; }
+  progress { width: 160px; }
+}

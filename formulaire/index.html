@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Exemple — Lien et images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <header class="section section-top">
+            <h1 class="section-title">Lien et images</h1>
+
+            <br>
+
+            <a class="wiki-link" href="https://en.wikipedia.org" target="_blank"> La page principale de Wikipedia </a>
+
+            <div class="logo-wrap">
+                <img class="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google">
+            </div>
+
+            <hr class="divider">
+        </header>
+
+        <section class="section">
+            <h1 class="section-subtitle">Des éléments !</h1>
+
+            <br>
+
+            <div class="row">
+                <input type="text" class="text-input" placeholder="Premiers pas avec Javascript">
+            </div>
+
+            <br>
+
+            <div class="row radios">
+                <label><input type="radio" name="choix" id="choix1"> Choix N°1</label>
+                <label><input type="radio" name="choix" id="choix2"> Choix N°2</label>
+                <label><input type="radio" name="choix" id="choix3"> Choix N°3</label>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <input type="password" class="text-input" value="secret">
+            </div>
+
+            <br>
+
+            <div class="row">
+                <input type="range" min="0" max="11" value="30" class="range-input" aria-label="Volume" id="volume-bar" oninput="updateValue(this.value)">
+                <span class="small-label" id="volume-text">Volume</span>
+                <p id="affichage"></p>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <label for="ouinon">Une case à cocher <input type="checkbox"></label>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <label class="small-label-inline">Date :</label>
+                <input type="text" class="date-input" placeholder="jj / mm / aaaa">
+            </div>
+
+            <br>
+
+            <div class="row">
+                <button class="btn">Ok</button>
+            </div>
+
+            <hr class="divider">
+        </section>
+
+        <section class="section">
+            <h1 class="section-subtitle">Barres de progression</h1>
+
+            <br>
+
+            <div class="progress-row">
+                <div class="progress-label">Téléchargement en cours :</div>
+                <progress id="dl" value="35" max="100"></progress>
+            </div>
+            
+            <br>
+
+            <div class="progress-row">
+                <div class="progress-label">Espace disponible :</div>
+                <progress id="space" value="45" max="100"></progress>
+            </div>
+
+            <hr class="divider">
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
